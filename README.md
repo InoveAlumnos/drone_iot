@@ -1,5 +1,5 @@
 ![logotipo](inove.jpg)
-# Drone Mock
+# Drone
 ### Simuladorde datos de un Drone basado en Flask
 
 Este es un proyecto realizado por miembros de inove como un servicio para incorporar telemetría de los sensores de un drone para el programa de ejemplos del curso de Python IoT.
