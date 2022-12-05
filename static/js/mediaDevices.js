@@ -46,10 +46,13 @@ if (SUPPORTS_MEDIA_DEVICES) {
         if (cameras.length === 0) {
             log('No se ha encontrado ninguna cámara');
         }
+        const camera = cameras[cameras.length - 1];
+
         // Crear un stream y obtener el video track
         navigator.mediaDevices.getUserMedia({
         video: {
-            facingMode: 'environment',
+            deviceId: camera.deviceId,
+            facingMode: ['user', 'environment'],
         }
         }).then(stream => {
             mediaDeviceTrack = stream.getVideoTracks()[0];
